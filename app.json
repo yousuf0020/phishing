@@ -1,0 +1,26 @@
+{
+  "name": "Phish Detector",
+  "description": "Detect and forward test phishing emails back to InfoSec, exponentially",
+  "repository": "https://github.com/shopeonarope/phishthis",
+  "stack": "container",
+  "formation": {
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "env": {
+    "GMAIL_USER": {
+      "description": "Your gmail username",
+      "required": true
+    },
+    "GMAIL_APP_PASSWORD": {
+      "description": "An app password for your gmail account (https://myaccount.google.com/apppasswords)",
+      "required": true
+    },
+    "FORWARD_ADDRESS": {
+      "description": "The address to fwd the detected phishing email to",
+      "value": "phishtest@mailinator.com",
+      "required": true
+    }
+  }
+}
